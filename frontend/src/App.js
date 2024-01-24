@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import Project from "./components/Project/Project";
 import Contact from "./components/Contact/Contact";
+import Loader from "./components/Loader/Loader";
 import Login from "./components/Login/Login";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser, loadUser } from "./actions/user";
@@ -29,7 +30,7 @@ function App() {
   return (
     <Router>
       {loading ? (
-        <div>Loading...</div>
+        <Loader />
       ) : (
         <>
           <Header />
