@@ -8,7 +8,6 @@ import spaceImage from "../../Images/space.jpg";
 import {
   Typography,
   Card,
-  CardHeader,
   CardContent,
   Grid,
   Box,

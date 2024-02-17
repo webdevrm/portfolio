@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import { GitHub, Instagram, LinkedIn, Mail } from "@mui/icons-material";
+import { Instagram, LinkedIn, Mail } from "@mui/icons-material";
 
 const Footer = () => {
   return (
@@ -10,7 +10,8 @@ const Footer = () => {
       <div>
         <Typography variant="h5">ABOUT ME</Typography>
         <Typography>
-          Hey!, my name is Rohit Mehra, I am a FullStack Developer. Contact for Your Personal Website.
+          Hey!, my name is Rohit Mehra, I am a FullStack Developer. Contact for
+          Your Personal Website.
         </Typography>
 
         <Link to="/contact" className="footerContactBtn">

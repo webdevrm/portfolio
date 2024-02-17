@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.d61e67a9.css",
-    "main.js": "/static/js/main.5c0e9b67.js",
+    "main.js": "/static/js/main.f00ab402.js",
     "static/media/moon.jpg": "/static/media/moon.ec9d16757c33a83a4e2f.jpg",
     "static/media/venus.jpg": "/static/media/venus.c093898c8e79f21d8154.jpg",
     "static/media/avtar.jpg": "/static/media/avtar.14c8532e3133e4967702.jpg",
     "static/media/space.jpg": "/static/media/space.167f7b1f3402562b8e43.jpg",
     "index.html": "/index.html",
     "main.d61e67a9.css.map": "/static/css/main.d61e67a9.css.map",
-    "main.5c0e9b67.js.map": "/static/js/main.5c0e9b67.js.map"
+    "main.f00ab402.js.map": "/static/js/main.f00ab402.js.map"
   },
   "entrypoints": [
     "static/css/main.d61e67a9.css",
-    "static/js/main.5c0e9b67.js"
+    "static/js/main.f00ab402.js"
   ]
 }

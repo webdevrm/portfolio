@@ -5,8 +5,7 @@ import { addSkills, getUser } from "../../actions/user";
 import { MdKeyboardBackspace } from "react-icons/md";
 import { Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import { FaTrash } from "react-icons/fa";
-import { ProjectCard } from "../Project/Project";
+// import { ProjectCard } from "../Project/Project";
 import { SkillsCard } from "../Home/Home";
 
 const AddSkills = () => {

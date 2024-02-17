@@ -1,7 +1,6 @@
 import React from "react";
 import "./About.css";
 import { Typography } from "@mui/material";
-import avtar from "../../Images/avtar.jpg";
 
 const About = ({ about }) => {
   return (

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useAlert } from "react-alert";
-import { addProject, deleteProject, getUser } from "../../actions/user";
+import { addProject, getUser } from "../../actions/user";
 import { MdKeyboardBackspace } from "react-icons/md";
 import { Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import { FaTrash } from "react-icons/fa";
+// import { FaTrash } from "react-icons/fa";
 import { ProjectCard } from "../Project/Project";
 
 const Project = () => {
