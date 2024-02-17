@@ -1,12 +1,16 @@
 import axios from "axios";
 
+const instance = axios.create({
+  baseURL: "https://rohitmehra-portfolio-live.onrender.com",
+});
+
 export const getUser = () => async (dispatch) => {
   try {
     dispatch({
       type: "GET_USER_REQUEST",
     });
 
-    const { data } = await axios.get(`/api/v1/user`);
+    const { data } = await instance.get(`/api/v1/user`);
 
     dispatch({
       type: "GET_USER_SUCCESS",
@@ -25,7 +29,7 @@ export const login = (email, password) => async (dispatch) => {
       type: "LOGIN_REQUEST",
     });
 
-    const { data } = await axios.post(
+    const { data } = await instance.post(
       `/api/v1/login`,
       {
         email,
@@ -55,7 +59,7 @@ export const logout = () => async (dispatch) => {
       type: "LOGOUT_REQUEST",
     });
 
-    const { data } = await axios.get(`/api/v1/logout`);
+    const { data } = await instance.get(`/api/v1/logout`);
 
     dispatch({
       type: "LOGOUT_SUCCESS",
@@ -74,7 +78,7 @@ export const loadUser = () => async (dispatch) => {
       type: "LOAD_USER_REQUEST",
     });
 
-    const { data } = await axios.get(`/api/v1/me`);
+    const { data } = await instance.get(`/api/v1/me`);
 
     dispatch({
       type: "LOAD_USER_SUCCESS",
@@ -94,7 +98,7 @@ export const updateUser =
         type: "UPDATE_USER_REQUEST",
       });
 
-      const { data } = await axios.put(
+      const { data } = await instance.put(
         `/api/v1/admin/update`,
         {
           name,
@@ -126,7 +130,7 @@ export const addTimeline = (title, description, date) => async (dispatch) => {
       type: "ADD_TIMELINE_REQUEST",
     });
 
-    const { data } = await axios.post(
+    const { data } = await instance.post(
       `/api/v1/admin/timeline/add`,
       {
         title,
@@ -157,7 +161,7 @@ export const deleteTimeline = (id) => async (dispatch) => {
       type: "DELETE_TIMELINE_REQUEST",
     });
 
-    const { data } = await axios.delete(`/api/v1/admin/timeline/${id}`);
+    const { data } = await instance.delete(`/api/v1/admin/timeline/${id}`);
 
     dispatch({
       type: "DELETE_TIMELINE_SUCCESS",
@@ -178,7 +182,7 @@ export const addProject =
         type: "ADD_PROJECT_REQUEST",
       });
 
-      const { data } = await axios.post(
+      const { data } = await instance.post(
         `/api/v1/admin/project/add`,
         {
           title,
@@ -211,7 +215,7 @@ export const contactUs = (name, email, message) => async (dispatch) => {
       type: "CONTACT_REQUEST",
     });
 
-    const { data } = await axios.post(
+    const { data } = await instance.post(
       `/api/v1/contact`,
       {
         name,
@@ -243,7 +247,7 @@ export const deleteProject = (id) => async (dispatch) => {
       type: "DELETE_PROJECT_REQUEST",
     });
 
-    const { data } = await axios.delete(`/api/v1/admin/project/${id}`);
+    const { data } = await instance.delete(`/api/v1/admin/project/${id}`);
 
     dispatch({
       type: "DELETE_PROJECT_SUCCESS",
@@ -263,7 +267,7 @@ export const addSkills = (title, image) => async (dispatch) => {
       type: "ADD_SKILLS_REQUEST",
     });
 
-    const { data } = await axios.post(
+    const { data } = await instance.post(
       `/api/v1/admin/skills/add`,
       {
         title,
@@ -294,7 +298,7 @@ export const deleteSkills = (id) => async (dispatch) => {
       type: "DELETE_SKILLS_REQUEST",
     });
 
-    const { data } = await axios.delete(`/api/v1/admin/skills/${id}`);
+    const { data } = await instance.delete(`/api/v1/admin/skills/${id}`);
 
     dispatch({
       type: "DELETE_SKILLS_SUCCESS",
