@@ -24,6 +24,7 @@ export const login = async (req, res) => {
       })
       .json({
         success: true,
+        token: token,
         message: "Logged in successfully",
       });
   } catch (error) {
@@ -44,7 +45,6 @@ export const logout = async (req, res) => {
       })
       .json({
         success: true,
-        token: token,
         message: "Logged out successfully",
       });
   } catch (error) {
