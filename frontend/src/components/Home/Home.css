@@ -1,132 +1,142 @@
 .homeCanvas {
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    filter: blur(10px);
-    position: absolute;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  filter: blur(10px);
+  position: absolute;
 }
 
 .homeCanvaContainer {
-    background-color: rgba(0, 0, 0, 0.048);
-    width: 100%;
-    z-index: 2;
-    position: relative;
-    height: 100vh;
-    color: white;
-    display: flex;
+  background-color: rgba(0, 0, 0, 0.048);
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  height: 100vh;
+  color: white;
+  display: flex;
 }
 
 .homeCanvaContainer > h1 {
-    filter: drop-shadow(0 0 2px rgb(25,116,216));
-    font: 700 4vmax "Josefin Sans", sans-serif;
-    text-align: center;
-    background-color: #fff;
-    padding: 2vmax;
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translate(0%, -50%);
+  filter: drop-shadow(0 0 2px rgb(25, 116, 216));
+  font: 700 4vmax "Josefin Sans", sans-serif;
+  text-align: center;
+  background-color: #fff;
+  padding: 2vmax;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
 }
 
 .homeCanvaContainer > h1 > p {
-    transition: all 0.5s;
-    color: rgb(36,36,36);
+  transition: all 0.5s;
+  color: rgb(36, 36, 36);
 }
 
 .homeCanvaContainer > h1 > p:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .homeCanvaContainer > a {
-    background-color: #fff;
-    color: rgb(0,0,0);
-    transition: all 0.5s;
-    font: 700 1rem "Ubuntu Mono", "Roboto";
-    text-decoration: none;
-    padding: 2vmax 6vmax;
-    box-sizing: border-box;
-    border: 1px solid white;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  background-color: #fff;
+  color: rgb(0, 0, 0);
+  transition: all 0.5s;
+  font: 700 1rem "Ubuntu Mono", "Roboto";
+  text-decoration: none;
+  padding: 2vmax 6vmax;
+  box-sizing: border-box;
+  border: 1px solid white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.homeScrollBtn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 50%;
-    border-radius: 100%;
-    transform: translateY(-150%);
-    padding: 0.5vmax;
-    animation: scrollpop 0.5s ease-in infinite alternate;
+.homeScrollBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  border-radius: 100%;
+  transform: translateY(-150%);
+  padding: 0.5vmax;
+  animation: scrollpop 0.5s ease-in infinite alternate;
 }
 
 .homeScrollBtn > svg {
-    font-size: 3vmax;
-    color: rgb(255, 255, 255);
+  font-size: 3vmax;
+  color: rgb(255, 255, 255);
 }
 
 .homeCanvaContainer > a:hover {
-    color: white;
-    background-color: rgb(0,0,0);
+  color: white;
+  background-color: rgb(0, 0, 0);
 }
 
-.homeCanvaBox{
-    position: absolute;
-    top:50%;
-    right: 0%;
-    text-align: right;
-    transform: translate(0%, -50%);
+.homeCanvaBox {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  text-align: right;
+  transform: translate(0%, -50%);
 }
 
 .homeCanvaBox > h2 {
-    font: 900 4rem "Ubuntu Mono", "Roboto";
-    line-height: 130px;
-    letter-spacing: 22px;
-    color: white;
-
+  font: 900 4rem "Ubuntu Mono", "Roboto";
+  line-height: 130px;
+  letter-spacing: 22px;
+  color: white;
 }
 
 .homeContainer {
-    background-color: #fff;
-    padding-top: 4vmax;
-    border-radius: 0 0 200px 200px;
-    border-bottom: 200px solid white;
-    position: relative;
-    z-index: 1;
+  background-color: #fff;
+  padding-top: 4vmax;
+  border-radius: 0 0 200px 200px;
+  border-bottom: 200px solid white;
+  position: relative;
+  z-index: 1;
 }
 
-.homeContainer>h3 {
-    text-align: center;
-    color: rgba(22, 20, 20, 0.904);
-    padding: 4vmax;
+.homeContainer > h3 {
+  text-align: center;
+  color: rgba(22, 20, 20, 0.904);
+  padding: 4vmax;
 }
 
 .homeSkills {
-    transform: translateY(-200px);
-    background-color: hsl(219, 48%, 8%);
-    height: 1200px;
-    position: relative;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: -200px;
+  transform: translateY(-200px);
+  background-color: hsl(219, 48%, 8%);
+  height: 1200px;
+  position: relative;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: -200px;
 }
 
-.homeSkills>h3 {
-    text-align: center;
-    color: #fff;
-    font-size: 4vmax;
+.homeSkills > h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 4vmax;
+}
+
+.iconbox {
+  height: 60px;
+  width: 60px;
+}
+
+.imgSkills {
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
 @keyframes scrollpop {
-    to{
-        transform: translateY(-200px);
-    }
+  to {
+    transform: translateY(-200px);
+  }
 }

@@ -10,8 +10,12 @@ const Footer = () => {
       <div>
         <Typography variant="h5">ABOUT ME</Typography>
         <Typography>
-          Hey!, my name is Rohit Mehra, I am a FullStack Developer. Contact for
-          Your Personal Website.
+          Greetings, I'm Rohit Mehra, a seasoned Full Stack Developer with a
+          proven track record of crafting bespoke digital solutions. With a
+          focus on delivering excellence in both front-end aesthetics and
+          back-end functionality, I specialize in creating personalized websites
+          that exceed expectations. Let's collaborate to bring your vision to
+          life.
         </Typography>
 
         <Link to="/contact" className="footerContactBtn">

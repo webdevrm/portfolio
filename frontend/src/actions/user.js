@@ -41,7 +41,7 @@ export const login = (email, password) => async (dispatch) => {
         },
       }
     );
-
+    localStorage.setItem("token", data.data.token);
     dispatch({
       type: "LOGIN_SUCCESS",
       payload: data.message,
@@ -60,7 +60,7 @@ export const logout = () => async (dispatch) => {
     });
 
     const { data } = await instance.get(`/api/v1/logout`);
-
+    localStorage.clear();
     dispatch({
       type: "LOGOUT_SUCCESS",
       payload: data.message,
@@ -73,12 +73,18 @@ export const logout = () => async (dispatch) => {
   }
 };
 export const loadUser = () => async (dispatch) => {
+  const token = localStorage.getItem("token");
   try {
     dispatch({
       type: "LOAD_USER_REQUEST",
     });
 
-    const { data } = await instance.get(`/api/v1/me`);
+    const { data } = await instance.get(`/api/v1/me`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
 
     dispatch({
       type: "LOAD_USER_SUCCESS",
@@ -93,6 +99,7 @@ export const loadUser = () => async (dispatch) => {
 };
 export const updateUser =
   (name, email, password, about) => async (dispatch) => {
+    const token = localStorage.getItem("token");
     try {
       dispatch({
         type: "UPDATE_USER_REQUEST",
@@ -109,6 +116,7 @@ export const updateUser =
         {
           headers: {
             "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
           },
         }
       );
@@ -125,6 +133,7 @@ export const updateUser =
     }
   };
 export const addTimeline = (title, description, date) => async (dispatch) => {
+  const token = localStorage.getItem("token");
   try {
     dispatch({
       type: "ADD_TIMELINE_REQUEST",
@@ -140,6 +149,7 @@ export const addTimeline = (title, description, date) => async (dispatch) => {
       {
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
       }
     );
@@ -156,12 +166,18 @@ export const addTimeline = (title, description, date) => async (dispatch) => {
   }
 };
 export const deleteTimeline = (id) => async (dispatch) => {
+  const token = localStorage.getItem("token");
   try {
     dispatch({
       type: "DELETE_TIMELINE_REQUEST",
     });
 
-    const { data } = await instance.delete(`/api/v1/admin/timeline/${id}`);
+    const { data } = await instance.delete(`/api/v1/admin/timeline/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
 
     dispatch({
       type: "DELETE_TIMELINE_SUCCESS",
@@ -177,6 +193,7 @@ export const deleteTimeline = (id) => async (dispatch) => {
 
 export const addProject =
   (title, description, url, image, techStack) => async (dispatch) => {
+    const token = localStorage.getItem("token");
     try {
       dispatch({
         type: "ADD_PROJECT_REQUEST",
@@ -194,6 +211,7 @@ export const addProject =
         {
           headers: {
             "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
           },
         }
       );
@@ -210,6 +228,7 @@ export const addProject =
     }
   };
 export const contactUs = (name, email, message) => async (dispatch) => {
+  const token = localStorage.getItem("token");
   try {
     dispatch({
       type: "CONTACT_REQUEST",
@@ -225,6 +244,7 @@ export const contactUs = (name, email, message) => async (dispatch) => {
       {
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
       }
     );
@@ -242,12 +262,18 @@ export const contactUs = (name, email, message) => async (dispatch) => {
 };
 
 export const deleteProject = (id) => async (dispatch) => {
+  const token = localStorage.getItem("token");
   try {
     dispatch({
       type: "DELETE_PROJECT_REQUEST",
     });
 
-    const { data } = await instance.delete(`/api/v1/admin/project/${id}`);
+    const { data } = await instance.delete(`/api/v1/admin/project/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
 
     dispatch({
       type: "DELETE_PROJECT_SUCCESS",
@@ -262,6 +288,7 @@ export const deleteProject = (id) => async (dispatch) => {
 };
 
 export const addSkills = (title, image) => async (dispatch) => {
+  const token = localStorage.getItem("token");
   try {
     dispatch({
       type: "ADD_SKILLS_REQUEST",
@@ -276,6 +303,7 @@ export const addSkills = (title, image) => async (dispatch) => {
       {
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
       }
     );
@@ -293,12 +321,18 @@ export const addSkills = (title, image) => async (dispatch) => {
 };
 
 export const deleteSkills = (id) => async (dispatch) => {
+  const token = localStorage.getItem("token");
   try {
     dispatch({
       type: "DELETE_SKILLS_REQUEST",
     });
 
-    const { data } = await instance.delete(`/api/v1/admin/skills/${id}`);
+    const { data } = await instance.delete(`/api/v1/admin/skills/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
 
     dispatch({
       type: "DELETE_SKILLS_SUCCESS",

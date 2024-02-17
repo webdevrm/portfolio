@@ -46,7 +46,7 @@ export const SkillsCard = ({ src, title, id, isAdmin = false }) => {
       >
         <Box className="iconbox rounded-4">
           <i className="webIcon">
-            <img src={src} alt={title} />
+            <img src={src} alt={title} className="imgSkills" />
           </i>
         </Box>
         <Typography variant="h5" sx={{ fontWeight: "bold" }}>
