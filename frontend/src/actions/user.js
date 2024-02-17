@@ -41,7 +41,7 @@ export const login = (email, password) => async (dispatch) => {
         },
       }
     );
-    localStorage.setItem("token", data.data.token);
+    localStorage.setItem("token", data?.token);
     dispatch({
       type: "LOGIN_SUCCESS",
       payload: data.message,
