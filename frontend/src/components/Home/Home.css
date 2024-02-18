@@ -140,3 +140,9 @@
     transform: translateY(-200px);
   }
 }
+
+@media screen and (max-width: 600px) {
+  .homeCanvaContainer > h1 {
+    display: none;
+  }
+}

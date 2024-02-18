@@ -15,11 +15,13 @@ export const login = async (req, res) => {
       });
     }
 
-    const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
+    const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, {
+      expiresIn: "5m",
+    });
     res
       .status(200)
       .cookie("token", token, {
-        expires: new Date(Date.now() + 600000),
+        expires: new Date(Date.now() + 300000),
         httpOnly: true,
       })
       .json({
@@ -58,6 +60,9 @@ export const logout = async (req, res) => {
 export const getUser = async (req, res) => {
   try {
     const user = await User.findOne().select("-password -email");
+    user.skills.sort((a, b) => {
+      return new Date(a.createdAt) - new Date(b.createdAt);
+    });
     res.status(200).json({
       success: true,
       user,
